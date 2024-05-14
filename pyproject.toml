@@ -6,6 +6,9 @@ authors = ["Karsten Silkenbäumer <993392+kassi@users.noreply.github.com>"]
 readme = "README.md"
 packages = [{include = "commitizen_ruby", from = "src"}]
 
+[tool.poetry.plugins."commitizen.provider"]
+commitizen-ruby = "commitizen_ruby.ruby_version_provider:RubyVersionProvider"
+
 [tool.poetry.dependencies]
 python = "^3.12"
 deepmerge = "^1.1.1"
