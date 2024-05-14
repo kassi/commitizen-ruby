@@ -10,6 +10,17 @@ packages = [{include = "commitizen_ruby", from = "src"}]
 python = "^3.12"
 
 
+[tool.poetry.group.dev.dependencies]
+commitizen = "^3.25.0"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "semver"
+version_provider = "poetry"
+update_changelog_on_bump = true
+change_type_map = { feat = "Features", fix = "Bug fixes" }
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
