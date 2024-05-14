@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "commitizen-ruby"
-version = "0.1.0"
-description = ""
+version = "0.0.0"
+description = "Commitizen version provider for Ruby gems/projects."
 authors = ["Karsten Silkenbäumer <993392+kassi@users.noreply.github.com>"]
 readme = "README.md"
 packages = [{include = "commitizen_ruby", from = "src"}]
