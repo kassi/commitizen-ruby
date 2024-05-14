@@ -13,8 +13,10 @@ class RubyVersionProvider(VersionProvider):
     search_re = r'(\s*)VERSION\s*=\s*"(\d+\.\d+\.\d+)"'
 
     def __init__(self, config):
+        self.config = self.default_config.copy()
+
         if 'commitizen_ruby' in config._settings:
-            self.config = always_merger.merge(self.default_config.copy(), config._settings['commitizen_ruby'])
+            self.config = always_merger.merge(self.config, config._settings['commitizen_ruby'])
 
         if self.config['file']:
             self.file = Path(self.config['file'])
