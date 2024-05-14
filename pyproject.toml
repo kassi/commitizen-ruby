@@ -8,12 +8,14 @@ packages = [{include = "commitizen_ruby", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
+deepmerge = "^1.1.1"
 
 
 [tool.poetry.group.dev.dependencies]
 commitizen = "^3.25.0"
 pytest = "^8.2.0"
 pytest-watcher = "^0.4.2"
+pytest-mock = "^3.14.0"
 
 [tool.commitizen]
 name = "cz_conventional_commits"
